@@ -1,0 +1,68 @@
+<html>
+<head>
+<script language="javascript">
+function formValidation()
+{
+var uid = document.registration.name;
+var age2 = document.registration.age;
+if(name_validation(uid,3,12))
+{
+}
+if(age_validation(age2,1,100))
+{
+
+}
+return false;
+}
+function name_validation(uid,mx,my)
+{
+var uid_len = uid.value.length;
+var uid_str= uid.value;
+if (uid_len == 0 || uid_len >= my || uid_len < mx || (isFinite(uid_str)) )
+{
+alert("Name should not be a number / empty and length should be between "+mx+" to "+my);
+return false;
+}
+return true;
+}
+function age_validation(age2,mx,my)
+{
+var age3= age2.value;
+if (age3<1 || age3>100)
+{
+alert("Age should be between "+mx+" to "+my);
+return false;
+}
+return true;
+}
+</script>
+</head>
+<body>
+
+<form name='registration' onSubmit="return formValidation();" >
+<table>
+<tr>
+<td><label for="name">Name*:</label></td>
+<td><input type="text" name="name" size="15" /></td>
+</tr>
+<tr>
+<td><label for="age">Age*: </label></td>
+<td><input type="text" name="age" size="10" /></td>
+</tr>
+<tr>
+<td><label for="email">Email*:</label></td>
+<td><input type="email" name="email" size="15" /></td>
+</tr>
+<tr>
+<td></td>
+
+<td><input type="submit" name="submit" value="Submit" /> </td>
+</tr>
+
+</table>
+</form>
+
+</body>
+
+
+</html>

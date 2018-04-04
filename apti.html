@@ -1,0 +1,40 @@
+<html>
+<head>
+<script language="javascript">
+function handleClick()
+  {         
+    for(var i = 1; i <= 4; i++) {
+  var radios = document.getElementsByName('rad');   
+
+  for(var j = 0; j < radios.length; j++) {
+    var radio = radios[j];
+    if(radio.value == "correct" && radio.checked) {
+     alert("Correct Answer ");
+	 return false;
+    }
+	if(radio.value == "wrong" && radio.checked)
+	{
+	alert("Incorrect Answer ");
+	return false;
+	}
+  }
+  }
+ }                   
+    
+  
+</script>
+<form  method="post"  >
+
+
+<p style="color: red">    Who is the owner of Microsoft? </p>  
+
+<input  type="radio" name="rad" value="wrong" >Bill Clinton
+<input  type="radio" name="rad" value="correct" > Bill Gates
+<input  type="radio" name="rad" value="wrong" > Mark Anderson
+<input  type="radio" name="rad" value="wrong" >Tim Berners Lee <br>
+
+<button class="submit" onclick="return handleClick()" type="submit">Check</button>
+
+</form>
+</head>
+</html>

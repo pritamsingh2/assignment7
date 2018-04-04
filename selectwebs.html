@@ -1,0 +1,24 @@
+<html><head>
+<script language="JavaScript">
+function goToNewPage(i) {
+                
+                    window.location.href = document.getElementById('target' + i).value;
+                
+            }
+	
+			
+</script>
+</head><body>
+<form name="f1">
+<select name="webs" id="target1" >
+	<option  value="http://sparsh.com"  > http://sparsh  </option>
+	<option  value="http://kshop.com"> http://kshop </option>
+	<option value="http://172.21.20.155/"> http://172.21.20.155/ </option>
+	<option value="http://newmywipro.wipro.com/">http://newmywipro.wipro.com/  </option>
+	<input type="button"  value="Visit Link!" onclick="goToNewPage(1)">
+</select>
+</form>
+
+
+
+</form></body></html>
